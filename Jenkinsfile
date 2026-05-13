@@ -15,12 +15,7 @@ pipeline {
 
         stage('Install Dependencies & Test') {
             steps {
-                sh '''
-python3 -m venv venv
-. venv/bin/activate
-pip install --upgrade pip
-pip install flask pytest
-'''
+                sh 'pip install flask pytest'
                 
             }
         }
